@@ -1,0 +1,390 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Wix Madefor Text', sans-serif;
+    text-decoration: none;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    margin:0 0 200px 0;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+a:visited{
+    color: black;
+}
+
+.nav-buttons{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2% 10%;
+    width: 100%;
+    height: 100%;
+    align-items: start;
+    font-size: 1.1rem;
+}
+
+.nav-buttons{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+}
+.nav-buttons li{
+    display: inline;
+    margin: 0 20% 0 0;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    transition-duration: .4s;
+    font-size: 1.1rem;
+}
+
+.nav-buttons>li:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.logo{
+    justify-self: center;
+}
+
+.logo>h3{
+    font-family: 'Kaushan Script', cursive;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+}
+
+header h1{
+    background-color: rgba(241, 245, 248, 1);
+    padding: 3% 10%;
+    width: 100%;
+    color:rgba(84, 117, 146, 1);
+}
+
+.main-products{
+    margin: 50px 0;
+    padding: 0 10%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 3%;
+}
+
+.filter ul li{
+    list-style: none;
+    margin: 20px 0;
+    color: rgba(68, 67, 67, .8);
+    width: fit-content;
+}
+
+.filter h4{
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.filter ul li:hover{
+    cursor: pointer;
+    color:black
+}
+
+.search-bar{
+    margin: 0 0 20px 0;
+    padding: 8px 10px;
+    width: 50%;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(128, 128, 128, 0.1);
+}
+
+.search-bar:focus{
+    outline-color: rgba(87, 87, 87, 0.4);
+}
+
+.price{
+    margin: 20px;
+}
+
+.price input{
+    margin: 0 0 10px 0;
+}
+
+.price h4{
+    letter-spacing: 3px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+
+.range-value{
+    font-size: .9rem;
+    color: rgba(68, 67, 67, .7);
+}
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+    align-items: end;
+    justify-items: center;
+}
+
+.cart:hover{
+    cursor: pointer;
+}
+
+
+.product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: flex-end;
+    width: 100%;
+    height: max-content;
+  }
+  
+  .product:hover{
+    cursor: pointer;
+  }
+
+  .img-link{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin: 50px 0 20px 0;
+  }
+  
+  .img-link{
+      width: 50%;
+      padding: auto;
+  }
+  
+  .name,
+  .product p{
+      text-decoration: none;
+      color: black;
+      margin: 3px 0;
+  }
+  
+  .name{
+      font-size: 1.2rem;
+      opacity: .5;
+      font-weight: 600;
+  }
+
+  .num{
+    position: relative;
+    width: 18px;
+    height: 18px;
+    background-color: rgba(184, 81, 16, 1);
+    border-radius: 50%;
+    bottom: 33px;
+    left: 15px;
+    font-size: .8rem;
+    text-align: center;
+}
+
+  .add-to-cart{
+    background-color:rgba(183, 80, 16, 0.8);
+    padding: 1% 10%;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 1px 5px rgba(128, 128, 128, 1);
+    transition: .1s;
+    margin-top: 3px;
+    bottom: 160px;
+    color:white;
+  }
+
+  .add-to-cart:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+  }
+
+  .add-to-cart:active{
+      background-color:rgba(184, 81, 16, 1) ;
+  }
+
+  /*---------------Cart-------------------------*/
+
+  .cart-block::-webkit-scrollbar{
+    display: none;
+  }
+
+  .cart-block{
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
+    position: fixed;
+    padding: 2% 1%;
+    z-index: 2;
+    right: 0;
+    height: 100%;
+    width: 30%;
+    top:0;
+    background-color: white;
+    box-shadow: 1px 1px 10px black;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .empty{
+    color: black;
+    font-size: 1.8rem;
+    align-self: center;
+  }
+
+
+  .exit-cart{
+    width: 20px;
+    align-self: start;
+    margin-bottom: 20px;
+  }
+
+  .exit-cart:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  .cart-banner{
+    font-family:'Kaushan Script', cursive;
+    align-self: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .cart-place-for-products{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+  }
+
+  .cart-product{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    justify-items: start;
+    align-items: center;
+    width: 100%;
+    margin: 20px;
+  }
+
+  .cart-product-info{
+    margin: 0 40% 0 0;
+  }	
+
+  .cart-product-info p{
+    margin: 5px 0 0 0;
+  }
+
+  .cart-product-img img{
+    height: 80px;
+  }
+
+  .cart-product-img{
+    margin: 0 5% 0 0;
+  }
+
+  .cart-product-quantity{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: end;
+    margin: 0 50px 0 0;
+  }
+
+  .cart-product-quantity img{
+    width: 15px;
+  }
+
+  .cart-product-quantity img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  .remove{
+    opacity: .6;
+  }
+
+  .remove:hover{
+    cursor:pointer;
+    opacity: .8;
+  }
+
+  .cart-product-quantity img:active{
+    transform: scale(1.2);
+  }
+
+  .cart-total{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .total{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 2.1rem;
+  }
+
+  .total-num{
+    font-family: 'Kaushan Script', cursive;
+    margin-left: 20px;
+  }
+
+  .checkout{
+    background-color: rgba(184, 81, 16, .8);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 50%;
+    padding: 5px 0;
+    margin-top: 30px;
+    box-shadow: 1px 1px 4px black;
+  }
+
+  .checkout:hover{
+    cursor: pointer;
+    background-color: rgba(184, 81, 16, 1);
+  }
+
+ 
+  /*--------------About-Page--------------------*/
+.main-about{
+    display: flex;
+    flex-direction: column;
+    padding: 80px 30% ;
+    width: 100%;
+    text-align: center;
+}
+
+.slash{
+margin: 0 10px 0 0;
+color: rgba(184, 81, 16, 1);
+}
+
+.main-about h1{
+    margin: 0 0 30px 0;
+}
+
+.main-about p{
+    color:rgba(100, 131, 157, 1);
+    font-weight: 600;
+}
